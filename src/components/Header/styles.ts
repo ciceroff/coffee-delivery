@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
 
   nav {
     display: flex;
-    gap: 0.5rem;
+    gap: 1.5rem;
 
     a {
       width: 3rem;
@@ -28,13 +28,11 @@ export const HeaderContainer = styled.header`
         justify-content: space-around;
         color: ${(props) => props.theme['purple-brand']};
       }
+    }
 
-      &:hover {
-        border-bottom: 3px solid ${(props) => props.theme['green-500']};
-      }
-
-      &.active {
-        color: ${(props) => props.theme['green-500']};
+    NavLink {
+      :focus {
+        box-shadow: 0 0 0 2px ${(props) => props.theme['yellow-brand']};
       }
     }
   }

@@ -9,6 +9,15 @@ export const HeaderContainer = styled.header`
     display: flex;
     gap: 1.5rem;
 
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: ${(props) => props.theme['purple-light']};
+      border-radius: 6px;
+      padding-right: 0.5rem;
+    }
+
     a {
       width: 3rem;
       height: 3rem;
@@ -30,10 +39,9 @@ export const HeaderContainer = styled.header`
       }
     }
 
-    NavLink {
-      :focus {
-        box-shadow: 0 0 0 2px ${(props) => props.theme['yellow-brand']};
-      }
+    #navLink {
+      background: ${(props) => props.theme['yellow-light']};
+      border-radius: 6px;
     }
   }
 `

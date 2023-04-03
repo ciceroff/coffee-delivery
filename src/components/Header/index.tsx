@@ -12,9 +12,10 @@ export function Header() {
           <a>
             <MapPin size={24} weight="fill" />
           </a>
+          <p>Brasília, DF</p>
         </div>
 
-        <NavLink to="/card" title="Carrinho">
+        <NavLink id="navLink" to="/card" title="Carrinho">
           <ShoppingCart size={24} weight="fill" />
         </NavLink>
       </nav>

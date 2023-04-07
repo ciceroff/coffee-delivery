@@ -1,5 +1,6 @@
 import { HomeContainer } from './styles'
 import img from '../../assets/Imagem.svg'
+import { Coffee } from '../../components/Coffee'
 
 export function Home() {
   return (
@@ -16,6 +17,7 @@ export function Home() {
       </main>
 
       <h1>Nossos cafés</h1>
+      <Coffee type="expresso"></Coffee>
     </HomeContainer>
   )
 }

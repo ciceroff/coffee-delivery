@@ -1,4 +1,4 @@
-import { CoffeeContainer } from './styles'
+import { CoffeeCartDescription, CoffeeContainer, CoffeeImage } from './styles'
 import {
   arabe,
   cafeComleite,
@@ -115,19 +115,19 @@ interface CoffeeProps {
 export function Coffee({ type }: CoffeeProps) {
   return (
     <CoffeeContainer>
-      <div id="image">
+      <CoffeeImage>
         <img src={coffees[`${type}`].img} alt="" />
-      </div>
+      </CoffeeImage>
       <span>{coffees[`${type}`].title}</span>
       <p id="description">{coffees[`${type}`].description}</p>
 
-      <div id="cardPrice">
+      <CoffeeCartDescription id="cardPrice">
         <p>R$ 9.90</p>
         <Minus />
         1
         <Plus />
         <ShoppingCart size={24} weight="fill" />
-      </div>
+      </CoffeeCartDescription>
     </CoffeeContainer>
   )
 }

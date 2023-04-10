@@ -8,26 +8,6 @@ export const CoffeeContainer = styled.div`
   border-radius: 6px 36px;
   position: relative;
 
-  #image {
-    top: -20px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-  }
-
-  #cardPrice {
-    p {
-      font-family: 'Baloo 2';
-      font-size: 1.2rem;
-      font-weight: 900;
-      padding-left: 1.25rem;
-      padding-top: 1.25rem;
-      color: ${(props) => props.theme['base-text']};
-    }
-  }
-
   span {
     font-size: 20px;
     line-height: 26px;
@@ -44,5 +24,23 @@ export const CoffeeContainer = styled.div`
     padding-top: 0.5rem;
     color: ${(props) => props.theme['base-label']};
     text-align: center;
+  }
+`
+export const CoffeeImage = styled.div`
+  top: -20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+`
+export const CoffeeCartDescription = styled.div`
+  p {
+    font-family: 'Baloo 2';
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding-left: 1.25rem;
+    padding-top: 1.25rem;
+    color: ${(props) => props.theme['base-text']};
   }
 `

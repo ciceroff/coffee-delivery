@@ -15,6 +15,7 @@ import {
   macchiato,
   mocaccino,
 } from '../../assets'
+import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 
 const coffees = {
   arabe: {
@@ -120,7 +121,13 @@ export function Coffee({ type }: CoffeeProps) {
       <span>{coffees[`${type}`].title}</span>
       <p id="description">{coffees[`${type}`].description}</p>
 
-      <div></div>
+      <div id="cardPrice">
+        <p>R$ 9.90</p>
+        <Minus />
+        1
+        <Plus />
+        <ShoppingCart size={24} weight="fill" />
+      </div>
     </CoffeeContainer>
   )
 }

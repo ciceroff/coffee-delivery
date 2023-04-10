@@ -17,6 +17,17 @@ export const CoffeeContainer = styled.div`
     justify-content: center;
   }
 
+  #cardPrice {
+    p {
+      font-family: 'Baloo 2';
+      font-size: 1.2rem;
+      font-weight: 900;
+      padding-left: 1.25rem;
+      padding-top: 1.25rem;
+      color: ${(props) => props.theme['base-text']};
+    }
+  }
+
   span {
     font-size: 20px;
     line-height: 26px;

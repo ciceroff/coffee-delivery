@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { ShoppingCart } from 'phosphor-react'
+import { NavLink } from 'react-router-dom'
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -17,16 +19,12 @@ export const HeaderContainer = styled.header`
       border-radius: 6px;
       padding-right: 0.5rem;
     }
-
-    #navLink {
-      background: ${(props) => props.theme['yellow-light']};
-      border-radius: 6px;
-    }
   }
 `
+
 export const LocationDescription = styled.a`
-  width: 3rem;
-  height: 3rem;
+  width: 2.375rem;
+  height: 2.375rem;
 
   display: flex;
   justify-content: center;
@@ -43,4 +41,16 @@ export const LocationDescription = styled.a`
     justify-content: space-around;
     color: ${(props) => props.theme['purple-brand']};
   }
+`
+export const CartContainer = styled(ShoppingCart)`
+  color: ${(props) => props.theme['yellow-dark']};
+`
+export const CartLink = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+  width: 2.375rem;
+  height: 2.375rem;
+  align-items: center;
+  background: ${(props) => props.theme['yellow-light']};
+  border-radius: 6px;
 `

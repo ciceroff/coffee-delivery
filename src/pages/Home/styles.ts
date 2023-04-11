@@ -34,3 +34,10 @@ export const HomeContainer = styled.main`
     color: ${(props) => props.theme['base-title']};
   }
 `
+
+export const Coffees = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 70rem;
+`

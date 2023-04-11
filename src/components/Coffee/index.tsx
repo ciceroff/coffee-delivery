@@ -14,9 +14,10 @@ interface CoffeeProps {
   img: string
   title: string
   description: string
+  subtitle: readonly string[]
 }
 
-export function Coffee({ img, title, description }: CoffeeProps) {
+export function Coffee({ img, title, description, subtitle }: CoffeeProps) {
   return (
     <CoffeeContainer>
       <CoffeeImage>

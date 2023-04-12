@@ -14,7 +14,7 @@ export const CoffeeContainer = styled.div`
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
-    padding-top: 9.3125rem;
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
     color: ${(props) => props.theme['base-subtitle']};
@@ -77,4 +77,22 @@ export const CoffeeCart = styled.button`
   width: 2.375rem;
   height: 2.375rem;
   border-radius: 6px;
+`
+export const CoffeeSubtitleBlock = styled.div`
+  padding-top: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const CoffeeSubtitle = styled.div`
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${(props) => props.theme['yellow-light']};
+  color: ${(props) => props.theme['yellow-dark']};
+  width: 5.0625rem;
+  height: 1.3125rem;
+  border-radius: 100px;
 `

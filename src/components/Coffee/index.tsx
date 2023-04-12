@@ -6,6 +6,8 @@ import {
   CoffeeCounterButton,
   CoffeeDescription,
   CoffeeImage,
+  CoffeeSubtitle,
+  CoffeeSubtitleBlock,
 } from './styles'
 
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
@@ -23,6 +25,11 @@ export function Coffee({ img, title, description, subtitle }: CoffeeProps) {
       <CoffeeImage>
         <img src={img} alt="" />
       </CoffeeImage>
+      <CoffeeSubtitleBlock>
+        {subtitle.map((element) => {
+          return <CoffeeSubtitle key={element}>{element}</CoffeeSubtitle>
+        })}
+      </CoffeeSubtitleBlock>
       <span>{title}</span>
       <CoffeeDescription>{description}</CoffeeDescription>
 

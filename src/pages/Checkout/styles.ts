@@ -7,6 +7,7 @@ export const CheckoutContainer = styled.main`
 
 export const PaymentInfo = styled.div`
   margin-top: 0.9375rem;
+  width: 40rem;
 `
 
 export const Cart = styled.div``
@@ -21,7 +22,7 @@ export const PaymentInfoBox = styled.div`
   background: ${(props) => props.theme['base-card']};
   width: 40rem;
   height: 23.35rem;
-
+  border-radius: 6px;
   form {
     padding-left: 2.5rem;
     display: flex;
@@ -57,4 +58,10 @@ export const AddressBoxInfoText = styled.div`
   span {
     color: ${(props) => props.theme['base-text']};
   }
+`
+
+export const PaymentMethodBox = styled.div`
+  background: ${(props) => props.theme['base-card']};
+  width: 40rem;
+  height: 12.9375rem;
 `

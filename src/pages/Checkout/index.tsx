@@ -7,6 +7,7 @@ import {
   PaymentInfo,
   PaymentInfoBox,
   PaymentInfoTitle,
+  PaymentMethodBox,
 } from './styles'
 
 export function Checkout() {
@@ -35,8 +36,9 @@ export function Checkout() {
             <input type="text" name="bairro" placeholder="Bairro" size={15} />
             <input type="text" name="cidade" placeholder="Cidade" size={25} />
             <input type="text" name="UF" placeholder="UF" size={5} />
-          </form>
-        </PaymentInfoBox>
+          </form>{' '}
+        </PaymentInfoBox>{' '}
+        <PaymentMethodBox>Ola</PaymentMethodBox>
       </PaymentInfo>
       <Cart></Cart>
     </CheckoutContainer>

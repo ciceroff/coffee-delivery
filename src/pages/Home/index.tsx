@@ -26,38 +26,6 @@ interface CoffeeInterface {
 }
 const coffees: readonly CoffeeInterface[] = [
   {
-    description: 'Bebida preparada com grãos de café árabe e especiarias',
-    title: 'Árabe',
-    img: arabe,
-    subtitle: ['Especial'],
-  },
-  {
-    description: 'Meio a meio de expresso tradicional com leite vaporizado',
-    title: 'Café com Leite',
-    img: cafeComleite,
-    subtitle: ['Tradicional'],
-  },
-  {
-    description:
-      'Bebida com canela feita de doses iguais de café, leite e espuma',
-    title: 'Capuccino',
-    img: capuccino,
-    subtitle: ['Tradicional'],
-  },
-  {
-    description: 'Bebida feita com chocolate dissolvido no leite quente e café',
-    title: 'Chocolate Quente',
-    img: chocolateQuente,
-    subtitle: ['Especial'],
-  },
-  {
-    description:
-      'Drink gelado de café expresso com rum, creme de leite e hortelã',
-    title: 'Cubano',
-    img: cubano,
-    subtitle: ['Especial'],
-  },
-  {
     description: 'O tradicional café feito com água quente e grãos moídos',
     title: 'Expresso Tradicional',
     img: expresso,
@@ -81,24 +49,24 @@ const coffees: readonly CoffeeInterface[] = [
     img: expressoGelado,
     subtitle: ['Tradicional'],
   },
-
   {
-    description: 'Bebida adocicada preparada com café e leite de coco',
-    title: 'Havaiano',
-    img: havaiano,
-    subtitle: ['Especial'],
-  },
-  {
-    description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
-    title: 'Irlandês',
-    img: irlandes,
-    subtitle: ['Especial'],
+    description: 'Meio a meio de expresso tradicional com leite vaporizado',
+    title: 'Café com Leite',
+    img: cafeComleite,
+    subtitle: ['Tradicional'],
   },
   {
     description:
       'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     title: 'Latte',
     img: latte,
+    subtitle: ['Tradicional'],
+  },
+  {
+    description:
+      'Bebida com canela feita de doses iguais de café, leite e espuma',
+    title: 'Capuccino',
+    img: capuccino,
     subtitle: ['Tradicional'],
   },
   {
@@ -113,6 +81,40 @@ const coffees: readonly CoffeeInterface[] = [
     title: 'Mocaccino',
     img: mocaccino,
     subtitle: ['Tradicional'],
+  },
+  {
+    description: 'Bebida feita com chocolate dissolvido no leite quente e café',
+    title: 'Chocolate Quente',
+    img: chocolateQuente,
+    subtitle: ['Especial'],
+  },
+  {
+    description:
+      'Drink gelado de café expresso com rum, creme de leite e hortelã',
+    title: 'Cubano',
+    img: cubano,
+    subtitle: ['Especial'],
+  },
+
+  {
+    description: 'Bebida adocicada preparada com café e leite de coco',
+    title: 'Havaiano',
+    img: havaiano,
+    subtitle: ['Especial'],
+  },
+
+  {
+    description: 'Bebida preparada com grãos de café árabe e especiarias',
+    title: 'Árabe',
+    img: arabe,
+    subtitle: ['Especial'],
+  },
+
+  {
+    description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
+    title: 'Irlandês',
+    img: irlandes,
+    subtitle: ['Especial'],
   },
 ] as const
 

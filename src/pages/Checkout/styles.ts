@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const CheckoutContainer = styled.main`
   margin-top: 2.5rem;
   color: ${(props) => props.theme['base-subtitle']};
+  height: 56.25rem;
 `
 
 export const PaymentInfo = styled.div`
@@ -41,13 +42,13 @@ export const PaymentInfoBox = styled.div`
     }
   }
 `
-export const AddressBoxInfo = styled.div`
+export const InfoBox = styled.div`
   padding: 2.5rem;
   display: flex;
   align-items: center;
 `
 
-export const AddressBoxInfoText = styled.div`
+export const BoxInfoText = styled.div`
   padding-left: 0.75rem;
   color: ${(props) => props.theme['base-text']};
 
@@ -61,7 +62,34 @@ export const AddressBoxInfoText = styled.div`
 `
 
 export const PaymentMethodBox = styled.div`
+  margin-top: 0.75rem;
   background: ${(props) => props.theme['base-card']};
   width: 40rem;
   height: 12.9375rem;
+`
+
+export const PaymentMethods = styled.div`
+  width: 35rem;
+  padding-left: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.75rem;
+`
+
+export const PaymentMethod = styled.button`
+  width: 12rem;
+  height: 3.1875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: ${(props) => props.theme['base-button']};
+  border: 0;
+  border-radius: 4px;
+  div {
+    padding-left: 1rem;
+  }
+  p {
+    font-size: 12px;
+  }
 `

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const CheckoutContainer = styled.main`
+  display: flex;
   margin-top: 2.5rem;
   color: ${(props) => props.theme['base-subtitle']};
   height: 56.25rem;
@@ -10,8 +11,6 @@ export const PaymentInfo = styled.div`
   margin-top: 0.9375rem;
   width: 40rem;
 `
-
-export const Cart = styled.div``
 
 export const PaymentInfoTitle = styled.p`
   font-family: 'Baloo 2';
@@ -28,8 +27,7 @@ export const PaymentInfoBox = styled.div`
     padding-left: 2.5rem;
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column;
-    justify-content: space-around;  */
+
     gap: 1rem;
     width: 35rem;
     height: 13.5rem;
@@ -92,4 +90,56 @@ export const PaymentMethod = styled.button`
   p {
     font-size: 12px;
   }
+`
+
+export const Cart = styled.div`
+  margin-left: 2rem;
+`
+
+export const CartTitle = styled.p`
+  font-family: 'Baloo 2';
+  font-size: 18px;
+  line-height: 23.4px;
+`
+
+export const CartInfo = styled.div`
+  margin-top: 0.9375rem;
+  width: 40rem;
+  background: ${(props) => props.theme['base-card']};
+`
+
+export const SelectedCoffees = styled.div`
+  width: 23rem;
+  border-bottom: 1px solid ${(props) => props.theme['base-button']};
+  margin-bottom: 1.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+`
+
+export const ItensPrice = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+`
+
+export const Coffee = styled.div`
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid ${(props) => props.theme['base-button']};
+  width: 23rem;
+`
+
+export const CoffeeInfoBox = styled.div`
+  display: flex;
+`
+
+export const CoffeeBoxInfoText = styled.div`
+  padding-left: 1.25rem;
+`
+
+export const CoffeeSpecification = styled.div`
+  display: flex;
+  justify-content: space-between;
 `

@@ -16,7 +16,49 @@ import {
   PaymentMethodBox,
   PaymentMethods,
   PaymentMethod,
+  CartTitle,
+  CartInfo,
+  SelectedCoffees,
+  ItensPrice,
+  Coffee,
+  CoffeeInfoBox,
+  CoffeeBoxInfoText,
+  CoffeeSpecification,
 } from './styles'
+import {
+  arabe,
+  cafeComleite,
+  capuccino,
+  chocolateQuente,
+  cubano,
+  expresso,
+  expressoAmericano,
+  expressoCremoso,
+  expressoGelado,
+  havaiano,
+  irlandes,
+  latte,
+  macchiato,
+  mocaccino,
+} from '../../assets'
+
+interface CoffeeInterface {
+  readonly price: string
+  readonly title: string
+  readonly img: string
+}
+const coffees: readonly CoffeeInterface[] = [
+  {
+    price: 'R$ 9.90',
+    title: 'Expresso Tradicional',
+    img: expresso,
+  },
+  {
+    price: 'R$ 9.90',
+    title: 'Expresso Americano',
+    img: expressoAmericano,
+  },
+] as const
 
 export function Checkout() {
   return (
@@ -66,7 +108,6 @@ export function Checkout() {
             </PaymentMethod>{' '}
             <PaymentMethod>
               <div>
-                {' '}
                 <Bank size={16} color="#8047F8" />
               </div>
               <p>CARTÃO DE DÉBITO</p>
@@ -80,7 +121,40 @@ export function Checkout() {
           </PaymentMethods>
         </PaymentMethodBox>
       </PaymentInfo>
-      <Cart></Cart>
+      <Cart>
+        <CartTitle>Cafés selecionados</CartTitle>
+        <CartInfo>
+          <SelectedCoffees>
+            {coffees.map((coffee) => {
+              return (
+                <Coffee key={coffee.title}>
+                  <CoffeeInfoBox>
+                    <img src={coffee.img} height={64} width={64} alt="" />
+                    <CoffeeBoxInfoText>
+                      <CoffeeSpecification>
+                        <p>{coffee.title}</p>
+                        <b>{coffee.price}</b>
+                      </CoffeeSpecification>
+                    </CoffeeBoxInfoText>
+                  </CoffeeInfoBox>
+                </Coffee>
+              )
+            })}
+          </SelectedCoffees>
+          <ItensPrice>
+            <p>Total de itens</p>
+            <p>R$ 29,70</p>
+          </ItensPrice>
+          <ItensPrice>
+            <p>Total de itens</p>
+            <p>R$ 29,70</p>
+          </ItensPrice>
+          <ItensPrice>
+            <b>Total de itens</b>
+            <b>R$ 29,70</b>
+          </ItensPrice>
+        </CartInfo>
+      </Cart>
     </CheckoutContainer>
   )
 }

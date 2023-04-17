@@ -3,7 +3,10 @@ import {
   CreditCard,
   CurrencyCircleDollar,
   MapPin,
+  Minus,
   Money,
+  Plus,
+  Trash,
 } from 'phosphor-react'
 import {
   InfoBox,
@@ -24,6 +27,12 @@ import {
   CoffeeInfoBox,
   CoffeeBoxInfoText,
   CoffeeSpecification,
+  CartCountButtons,
+  ButtonCounter,
+  RemoveButtonBlock,
+  CartButtons,
+  ItensPriceTotal,
+  SubmitButton,
 } from './styles'
 import {
   arabe,
@@ -133,8 +142,23 @@ export function Checkout() {
                     <CoffeeBoxInfoText>
                       <CoffeeSpecification>
                         <p>{coffee.title}</p>
-                        <b>{coffee.price}</b>
+                        <CartButtons>
+                          <CartCountButtons>
+                            <ButtonCounter>
+                              <Minus />
+                            </ButtonCounter>
+                            <p>1</p>
+                            <ButtonCounter>
+                              <Plus />
+                            </ButtonCounter>
+                          </CartCountButtons>
+                          <RemoveButtonBlock>
+                            <Trash color="#8047F8" />
+                            <p>REMOVER</p>
+                          </RemoveButtonBlock>
+                        </CartButtons>
                       </CoffeeSpecification>
+                      <b>{coffee.price}</b>
                     </CoffeeBoxInfoText>
                   </CoffeeInfoBox>
                 </Coffee>
@@ -146,13 +170,16 @@ export function Checkout() {
             <p>R$ 29,70</p>
           </ItensPrice>
           <ItensPrice>
-            <p>Total de itens</p>
+            <p>Entrega</p>
             <p>R$ 29,70</p>
           </ItensPrice>
-          <ItensPrice>
-            <b>Total de itens</b>
+          <ItensPriceTotal>
+            <b>Total</b>
             <b>R$ 29,70</b>
-          </ItensPrice>
+          </ItensPriceTotal>
+          <SubmitButton>
+            <p>CONFIRMAR PEDIDO</p>{' '}
+          </SubmitButton>
         </CartInfo>
       </Cart>
     </CheckoutContainer>

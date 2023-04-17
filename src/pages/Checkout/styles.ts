@@ -104,8 +104,10 @@ export const CartTitle = styled.p`
 
 export const CartInfo = styled.div`
   margin-top: 0.9375rem;
-  width: 40rem;
+  width: 28rem;
+  height: 31.125rem;
   background: ${(props) => props.theme['base-card']};
+  border-radius: 6px 44px;
 `
 
 export const SelectedCoffees = styled.div`
@@ -122,6 +124,18 @@ export const ItensPrice = styled.div`
   justify-content: space-between;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+  margin-top: 0.75rem;
+  font-size: 14px;
+`
+
+export const ItensPriceTotal = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin-top: 0.75rem;
+  font-size: 20px;
 `
 
 export const Coffee = styled.div`
@@ -133,13 +147,78 @@ export const Coffee = styled.div`
 
 export const CoffeeInfoBox = styled.div`
   display: flex;
+  width: 23rem;
+  height: 5rem;
 `
 
 export const CoffeeBoxInfoText = styled.div`
   padding-left: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  width: 19rem;
 `
 
 export const CoffeeSpecification = styled.div`
   display: flex;
+  flex-direction: column;
+`
+
+export const CartCountButtons = styled.div`
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  background: ${(props) => props.theme['base-button']};
+  margin-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  gap: 0.25rem;
+  border-radius: 6px;
+  width: 4.5rem;
+`
+
+export const ButtonCounter = styled.button`
+  border: 0px;
+  color: ${(props) => props.theme['purple-dark']};
+  background: transparent;
+`
+
+export const RemoveButtonBlock = styled.button`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: ${(props) => props.theme['base-button']};
+  margin-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  gap: 0.25rem;
+  border-radius: 6px;
+  width: 5.6875rem;
+  height: 2rem;
+  border: 0;
+  p {
+    font-size: 12px;
+    color: ${(props) => props.theme['base-text']};
+  }
+`
+
+export const CartButtons = styled.div`
+  display: flex;
+`
+
+export const SubmitButton = styled.button`
+  margin-top: 1.5rem;
+  align-self: center;
+  margin-left: 2.5rem;
+  width: 23rem;
+  height: 2.875rem;
+  background: ${(props) => props.theme['yellow-brand']};
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+  }
 `

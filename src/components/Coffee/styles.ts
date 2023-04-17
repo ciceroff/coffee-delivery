@@ -68,6 +68,7 @@ export const CoffeeCounterButton = styled.button`
   color: ${(props) => props.theme['purple-dark']};
   background: transparent;
 `
+
 export const CoffeeCart = styled.button`
   border: 0;
   color: white;

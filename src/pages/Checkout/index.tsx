@@ -50,26 +50,11 @@ import {
   macchiato,
   mocaccino,
 } from '../../assets'
-
-interface CoffeeInterface {
-  readonly price: string
-  readonly title: string
-  readonly img: string
-}
-const coffees: readonly CoffeeInterface[] = [
-  {
-    price: 'R$ 9.90',
-    title: 'Expresso Tradicional',
-    img: expresso,
-  },
-  {
-    price: 'R$ 9.90',
-    title: 'Expresso Americano',
-    img: expressoAmericano,
-  },
-] as const
+import { useContext } from 'react'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 export function Checkout() {
+  const { coffees } = useContext(CoffeeContext)
   return (
     <CheckoutContainer>
       <PaymentInfo>
@@ -147,7 +132,7 @@ export function Checkout() {
                             <ButtonCounter>
                               <Minus />
                             </ButtonCounter>
-                            <p>1</p>
+                            <p>{coffee.amount}</p>
                             <ButtonCounter>
                               <Plus />
                             </ButtonCounter>

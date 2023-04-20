@@ -19,7 +19,7 @@ export function Header() {
           <p>Brasília, DF</p>
         </div>
 
-        <CartLink id="navLink" to="/card" title="Carrinho">
+        <CartLink id="navLink" to="/order" title="Carrinho">
           <CartContainer size={24} weight="fill" />
         </CartLink>
       </nav>

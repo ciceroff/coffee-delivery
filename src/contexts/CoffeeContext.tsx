@@ -1,5 +1,4 @@
 import { ReactNode, createContext, useState } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 
 interface Coffee {
   title: string
@@ -28,6 +27,7 @@ export function CoffeeContextProvider({
 
   function addSelectedCoffee(newCoffee: Coffee) {
     setCoffees([...coffees, newCoffee])
+    console.log(coffees)
   }
 
   function deleteSelectedCoffee(coffeeKey: string) {

@@ -3,10 +3,7 @@ import {
   CreditCard,
   CurrencyCircleDollar,
   MapPin,
-  Minus,
   Money,
-  Plus,
-  Trash,
 } from 'phosphor-react'
 import {
   InfoBox,
@@ -23,38 +20,17 @@ import {
   CartInfo,
   SelectedCoffees,
   ItensPrice,
-  Coffee,
-  CoffeeInfoBox,
-  CoffeeBoxInfoText,
-  CoffeeSpecification,
-  CartCountButtons,
-  ButtonCounter,
-  RemoveButtonBlock,
-  CartButtons,
   ItensPriceTotal,
   SubmitButton,
 } from './styles'
-import {
-  arabe,
-  cafeComleite,
-  capuccino,
-  chocolateQuente,
-  cubano,
-  expresso,
-  expressoAmericano,
-  expressoCremoso,
-  expressoGelado,
-  havaiano,
-  irlandes,
-  latte,
-  macchiato,
-  mocaccino,
-} from '../../assets'
+
 import { useContext } from 'react'
 import { CoffeeContext } from '../../contexts/CoffeeContext'
+import { Coffee } from './components/Coffee'
 
 export function Checkout() {
   const { coffees } = useContext(CoffeeContext)
+  function handleDeleteCoffee() {}
   return (
     <CheckoutContainer>
       <PaymentInfo>
@@ -120,34 +96,7 @@ export function Checkout() {
         <CartInfo>
           <SelectedCoffees>
             {coffees.map((coffee) => {
-              return (
-                <Coffee key={coffee.title}>
-                  <CoffeeInfoBox>
-                    <img src={coffee.img} height={64} width={64} alt="" />
-                    <CoffeeBoxInfoText>
-                      <CoffeeSpecification>
-                        <p>{coffee.title}</p>
-                        <CartButtons>
-                          <CartCountButtons>
-                            <ButtonCounter>
-                              <Minus />
-                            </ButtonCounter>
-                            <p>{coffee.amount}</p>
-                            <ButtonCounter>
-                              <Plus />
-                            </ButtonCounter>
-                          </CartCountButtons>
-                          <RemoveButtonBlock>
-                            <Trash color="#8047F8" />
-                            <p>REMOVER</p>
-                          </RemoveButtonBlock>
-                        </CartButtons>
-                      </CoffeeSpecification>
-                      <b>{coffee.price}</b>
-                    </CoffeeBoxInfoText>
-                  </CoffeeInfoBox>
-                </Coffee>
-              )
+              return <Coffee {...coffee}></Coffee>
             })}
           </SelectedCoffees>
           <ItensPrice>

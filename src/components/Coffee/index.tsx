@@ -32,7 +32,7 @@ export function Coffee({ img, title, description, subtitle }: CoffeeProps) {
       price: '9.90',
       title,
       amount: coffeeAmount,
-      key: uuidv4(),
+      id: uuidv4(),
     })
   }
 

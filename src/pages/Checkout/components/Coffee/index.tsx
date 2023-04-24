@@ -8,15 +8,24 @@ import {
   ButtonCounter,
   RemoveButtonBlock,
 } from './styles'
+import { useContext } from 'react'
+import { CoffeeContext } from '../../../../contexts/CoffeeContext'
 
 interface CoffeeProps {
   title: string
   img: string
   price: string
   amount: number
+  id: string
 }
+
 export function Coffee(coffee: CoffeeProps) {
-  function handleDeleteCoffee() {}
+  const { deleteSelectedCoffee } = useContext(CoffeeContext)
+
+  function handleDeleteCoffee() {
+    deleteSelectedCoffee(coffee.id)
+  }
+
   return (
     <CoffeeContainer key={coffee.title}>
       <CoffeeInfoBox>

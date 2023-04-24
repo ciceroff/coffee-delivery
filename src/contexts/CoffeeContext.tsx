@@ -5,7 +5,7 @@ interface Coffee {
   price: string
   amount: number
   img: string
-  key: string
+  id: string
 }
 
 interface CoffeeContextType {
@@ -27,16 +27,17 @@ export function CoffeeContextProvider({
 
   function addSelectedCoffee(newCoffee: Coffee) {
     setCoffees([...coffees, newCoffee])
+    console.log(newCoffee)
     console.log(coffees)
   }
 
   function deleteSelectedCoffee(coffeeKey: string) {
     const newCoffees = coffees.filter((coffee) => {
-      return coffee.key != coffeeKey
+      return coffee.id != coffeeKey
     })
-
+    
     setCoffees(newCoffees)
-  }
+   }
 
   return (
     <CoffeeContext.Provider

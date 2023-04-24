@@ -30,7 +30,6 @@ import { Coffee } from './components/Coffee'
 
 export function Checkout() {
   const { coffees } = useContext(CoffeeContext)
-  function handleDeleteCoffee() {}
   return (
     <CheckoutContainer>
       <PaymentInfo>

@@ -8,7 +8,7 @@ import {
   ButtonCounter,
   RemoveButtonBlock,
 } from './styles'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { CoffeeContext } from '../../../../contexts/CoffeeContext'
 
 interface CoffeeProps {
@@ -21,9 +21,20 @@ interface CoffeeProps {
 
 export function Coffee(coffee: CoffeeProps) {
   const { deleteSelectedCoffee } = useContext(CoffeeContext)
-
+  const [amount, setAmount] = useState(coffee.amount)
   function handleDeleteCoffee() {
     deleteSelectedCoffee(coffee.id)
+  }
+
+  function handleSubtractCoffeeAmount() {
+    const newAmount = amount - 1 < 0 ? 0 : amount - 1
+
+    setAmount(newAmount)
+  }
+
+  function handleSumCoffeeAmount() {
+    const newAmount = amount + 1
+    setAmount(newAmount)
   }
 
   return (
@@ -35,11 +46,14 @@ export function Coffee(coffee: CoffeeProps) {
             <p>{coffee.title}</p>
             <CartButtons>
               <CartCountButtons>
-                <ButtonCounter>
+                <ButtonCounter
+                  type="button"
+                  onClick={handleSubtractCoffeeAmount}
+                >
                   <Minus />
                 </ButtonCounter>
-                <p>{coffee.amount}</p>
-                <ButtonCounter>
+                <p>{amount}</p>
+                <ButtonCounter type="button" onClick={handleSumCoffeeAmount}>
                   <Plus />
                 </ButtonCounter>
               </CartCountButtons>

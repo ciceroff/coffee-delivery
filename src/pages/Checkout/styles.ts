@@ -6,7 +6,22 @@ export const CheckoutContainer = styled.main`
   color: ${(props) => props.theme['base-subtitle']};
   height: 56.25rem;
 `
+export const PageForm = styled.form`
+  padding-left: 2.5rem;
+  display: flex;
 
+  gap: 1rem;
+  width: 35rem;
+  height: 13.5rem;
+
+  input {
+    background: ${(props) => props.theme['base-input']};
+    border: 1px solid #e6e5e5;
+    border-radius: 4px;
+    height: 42px;
+    margin-left: 2rem;
+  }
+`
 export const PaymentInfo = styled.div`
   margin-top: 0.9375rem;
   width: 40rem;
@@ -23,23 +38,8 @@ export const PaymentInfoBox = styled.div`
   width: 40rem;
   height: 23.35rem;
   border-radius: 6px;
-  form {
-    padding-left: 2.5rem;
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 1rem;
-    width: 35rem;
-    height: 13.5rem;
-
-    input {
-      background: ${(props) => props.theme['base-input']};
-      border: 1px solid #e6e5e5;
-      border-radius: 4px;
-      height: 42px;
-    }
-  }
 `
+
 export const InfoBox = styled.div`
   padding: 2.5rem;
   display: flex;

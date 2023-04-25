@@ -10,8 +10,11 @@ import {
   OrderConfirmedText,
   OrderConfirmedTitle,
 } from './styles'
+import { useContext } from 'react'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 export function OrderConfirmed() {
+  const { order } = useContext(CoffeeContext)
   return (
     <OrderConfirmedContainer>
       <OrderConfirmedTitle>Uhu! Pedido confirmado</OrderConfirmedTitle>
@@ -24,9 +27,12 @@ export function OrderConfirmed() {
             <MapPin size={32} color="#8047F8" weight="fill" />
             <OrderConfirmedText>
               <p>
-                Entrega em <b>Rua João Daniel Martinelli, 102</b>
+                Entrega em{' '}
+                <b>
+                  {order?.rua}, {order?.numero}
+                </b>
               </p>
-              <span>Farrapos - Porto Alegre, RS</span>
+              <span>{order?.cidade}</span>
             </OrderConfirmedText>
           </OrderConfirmedData>
           <OrderConfirmedData>
